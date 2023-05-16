@@ -8,3 +8,7 @@ Do the following to execute this application
 6) Create a DB and update its name in .env file
 7) Run "php artisan migrate" command
 8) Then run this application in localhost
+9) It have default admin and can login to the site using admin@refferal.app/admin@pass credentials
+10) Login route is /login
+11) Register route is /register
+12) Users list can be seen in /users and its accesss is restricted to admin
