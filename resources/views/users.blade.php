@@ -18,8 +18,9 @@
                     <tr>
                         <th class="col-sm-3">Name</th>
                         <th class="col-sm-3">Refferal</th>
-                        <th class="col-sm-3">Points</th>
-                        <th class="col-sm-3">Level</th>
+                        <th class="col-sm-2">Points</th>
+                        <th class="col-sm-2">Level</th>
+                        <th class="col-sm-2">Refferal by</th>
                     </tr>
                     @foreach($userArr as $user)
                     <tr>
@@ -27,6 +28,7 @@
                         <td>{{$user->refferal}}</td>
                         <td>{{$user->refCount}}</td>
                         <td>{{$user->level}}</td>
+                        <td>{{$user->refferedBy}}</td>
                     </tr>
                     @endforeach
                   </table>

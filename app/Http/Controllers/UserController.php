@@ -14,6 +14,7 @@ class UserController extends Controller
         $userArr = [];
         $level = 0;
         foreach ($users as $user) {
+           $refferedBy =  Refferal::select("user_refferal")->where("user_id",$user->id)->first();
            $count = Refferal::where("user_refferal",$user->refferal)->count();
            if ($count >= 10) {
               $count = 10;
@@ -23,6 +24,7 @@ class UserController extends Controller
            }
            $user["refCount"] = $count;
            $user["level"] = $level;
+           $user["refferedBy"] = $refferedBy["user_refferal"] ?? "";
            $userArr[] = $user;
         }
         return view('users',compact("userArr"));
